@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "85f14b43-4fff-4c51-82f7-b1dd0885a5e7",
+		"name": "Spring-API-Gateway-No-Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16858693"
+	},
+	"item": [
+		{
+			"name": "Get Restaurant status (35fds631)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9001/restaurant/orders/status/35fds631",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"restaurant",
+						"orders",
+						"status",
+						"35fds631"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurant status (35fds631, 9u71245h)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9001/restaurant/orders/status/9u71245h",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"restaurant",
+						"orders",
+						"status",
+						"9u71245h"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order - (35fds631, 9u71245h)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9002/order/9u71245h",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"order",
+						"9u71245h"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway - Order (35fds631, 9u71245h)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/order/9u71245h",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"9u71245h"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway - Get Restaurant status (35fds631)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/restaurant/orders/status/35fds631",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurant",
+						"orders",
+						"status",
+						"35fds631"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
