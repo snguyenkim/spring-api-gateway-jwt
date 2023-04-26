@@ -1,4 +1,15 @@
-# jwt-apigateway-security
+### Run Option 1: API-Gateway without security
+1) Run discovery-server
+2) Run restaurant-service
+3) Run order-service
+4) Run api-gateway-no-security
+
+### Run Option 2: API-Gateway with security
+1) Run discovery-server
+2) Run restaurant-service
+3) Run order-service
+4) Run api-gateway
+5) Run auth-h2-service
 
 ## Register an user
 
@@ -17,7 +28,7 @@ curl --location --request POST 'http://localhost:8080/auth/register' \
 ## Generate token
 
 ```
-curl --location --request POST 'http://localhost:9898/auth/token' \
+curl --location --request POST 'http://localhost:8080/auth/token' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: JSESSIONID=7CE91EE75A65277C0DCB6C5736C5DF5D' \
 --data-raw '{
@@ -29,7 +40,7 @@ curl --location --request POST 'http://localhost:9898/auth/token' \
 
 ```
 curl --location --request GET 'http://localhost:8080/order/37jbd832' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJCYXNhbnQiLCJpYXQiOjE2NzkwNTU4MDIsImV4cCI6MTY3OTA1NzYwMn0.Q0bwS5_16q1Z8K-p_flpmyRoJNFCyOhU2AMKSNYh66o' \
+--header 'Authorization: Bearer <token>' \
 --header 'Cookie: JSESSIONID=7CE91EE75A65277C0DCB6C5736C5DF5D'
 ```
 
@@ -37,6 +48,6 @@ curl --location --request GET 'http://localhost:8080/order/37jbd832' \
 
 ```
 curl --location --request GET 'http://localhost:8080/restaurant/orders/status/37jbd832' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJCYXNhbnQiLCJpYXQiOjE2NzkwNTU1MDcsImV4cCI6MTY3OTA1NzMwN30.9nNAW1rx8RoTIrhn5Abtzg7RplvT9_d-U5EOwUcJZq8' \
+--header 'Authorization: Bearer <token>' \
 --header 'Cookie: JSESSIONID=7CE91EE75A65277C0DCB6C5736C5DF5D'
 ```
