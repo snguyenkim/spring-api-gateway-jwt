@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "4217cad4-c1a9-4d74-a571-ad2252c25e1b",
+		"name": "Spring-API-Gateway-With-Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16858693"
+	},
+	"item": [
+		{
+			"name": "Get Restaurant status (35fds631)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9001/restaurant/orders/status/35fds631",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"restaurant",
+						"orders",
+						"status",
+						"35fds631"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurant status (35fds631, 9u71245h)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9001/restaurant/orders/status/9u71245h",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"restaurant",
+						"orders",
+						"status",
+						"9u71245h"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order - (35fds631, 9u71245h)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9002/order/9u71245h",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"order",
+						"9u71245h"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway - Order (35fds631, 9u71245h)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/order/9u71245h",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"9u71245h"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway - Get Restaurant status (35fds631)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQYXVsIiwiaWF0IjoxNjgyNTQyODM0LCJleHAiOjE2ODI1NDQ2MzR9.oT4N-u48pUkeLl1GInsyQ57dZQbuV7hBG3KG2ZHOCEQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/restaurant/orders/status/35fds631",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurant",
+						"orders",
+						"status",
+						"35fds631"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User - Direct from Auth-Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Paul\",\n    \"password\":\"Pwd2\",\n    \"email\":\"paul@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token - Direct from Auth-Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Paul1\",\n    \"password\":\"Pwd2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/auth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
